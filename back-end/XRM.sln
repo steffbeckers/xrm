@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRM.API", "src\XRM.API\XRM.API.csproj", "{EE61FCBF-4BAE-4EDE-A1DD-4577604805E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE61FCBF-4BAE-4EDE-A1DD-4577604805E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE61FCBF-4BAE-4EDE-A1DD-4577604805E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE61FCBF-4BAE-4EDE-A1DD-4577604805E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE61FCBF-4BAE-4EDE-A1DD-4577604805E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34115F8C-67CA-4DEB-A66C-2AA508BCDC57}
+	EndGlobalSection
+EndGlobal
