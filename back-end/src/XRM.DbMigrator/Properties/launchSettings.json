@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "XRM.DbMigrator": {
+      "commandName": "Project"
+    }
+  }
+}
