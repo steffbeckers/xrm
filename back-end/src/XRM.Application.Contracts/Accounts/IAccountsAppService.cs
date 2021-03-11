@@ -7,6 +7,5 @@ namespace XRM.Accounts
 {
     public interface IAccountsAppService : IApplicationService
     {
-        Task<ListResultDto<AccountDto>> GetList();
     }
 }

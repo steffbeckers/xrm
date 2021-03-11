@@ -16,14 +16,14 @@ namespace XRM.EntityFrameworkCore
             //builder.Entity<YourEntity>(b =>
             //{
             //    b.ToTable(XRMConsts.DbTablePrefix + "YourEntities", XRMConsts.DbSchema);
-            //    b.ConfigureByConvention(); //auto configure for the base class props
+            //    b.ConfigureByConvention(); // auto configure for the base class props
             //    //...
             //});
 
             builder.Entity<Account>(b =>
             {
                 b.ToTable(XRMConsts.DbTablePrefix + "Accounts", XRMConsts.DbSchema);
-                b.ConfigureByConvention(); //auto configure for the base class props
+                b.ConfigureByConvention(); // auto configure for the base class props
 
                 b.Property(p => p.Name)
                     .HasMaxLength(100);

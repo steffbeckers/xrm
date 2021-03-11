@@ -13,6 +13,8 @@ namespace XRM
              * into multiple profile classes for a better organization. */
 
             CreateMap<Account, AccountDto>();
+            CreateMap<CreateAccountDto, Account>();
+            CreateMap<UpdateAccountDto, Account>();
         }
     }
 }

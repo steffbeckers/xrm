@@ -1,4 +1,4 @@
-import { ListResultDto } from '@abp/ng.core';
+import { ListResultDto, PagedAndSortedResultRequestDto } from '@abp/ng.core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AccountsService } from '@proxy/accounts';
 import { AccountDto } from '@proxy/accounts/dto';
@@ -19,10 +19,10 @@ export class AccountsListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.accountsService
-      .getList()
+      .getList({} as PagedAndSortedResultRequestDto)
       .pipe(takeUntil(this.unsubscribe))
-      .subscribe((response: ListResultDto<AccountDto>) => {
-        this.accounts = response.items;
+      .subscribe((result: ListResultDto<AccountDto>) => {
+        this.accounts = result.items;
       });
   }
 

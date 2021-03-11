@@ -7,7 +7,7 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace XRM.Accounts
 {
-    public class Account : AuditedAggregateRoot<Guid>
+    public class Account : FullAuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// The account name.

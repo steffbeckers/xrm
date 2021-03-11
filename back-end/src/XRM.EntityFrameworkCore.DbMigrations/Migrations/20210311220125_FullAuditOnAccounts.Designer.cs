@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using XRM.EntityFrameworkCore;
@@ -10,9 +11,10 @@ using XRM.EntityFrameworkCore;
 namespace XRM.Migrations
 {
     [DbContext(typeof(XRMMigrationsDbContext))]
-    partial class XRMMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210311220125_FullAuditOnAccounts")]
+    partial class FullAuditOnAccounts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
