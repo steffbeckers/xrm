@@ -7,6 +7,7 @@
     "Permission:Accounts": "Accounts",
     "Permission:Accounts:Create": "Create",
     "Permission:Accounts:Edit": "Edit",
-    "Permission:Accounts:Delete": "Delete"
+    "Permission:Accounts:Delete": "Delete",
+    "XRM:00001": "There is already an account with the same name: {name}"
   }
 }

@@ -27,6 +27,7 @@ namespace XRM.EntityFrameworkCore
 
                 b.Property(p => p.Name)
                     .HasMaxLength(100);
+                b.HasIndex(p => p.Name);
 
                 b.Property(p => p.Email)
                     .HasMaxLength(100);

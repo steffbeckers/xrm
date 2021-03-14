@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
@@ -11,7 +10,15 @@ using XRM.Permissions;
 namespace XRM.Accounts
 {
     [Authorize(XRMPermissions.Accounts)]
-    public class AccountsAppService : CrudAppService<Account, AccountDto, Guid, PagedAndSortedResultRequestDto, CreateAccountDto, UpdateAccountDto>, IAccountsAppService
+    public class AccountsAppService :
+        CrudAppService<
+            Account,
+            AccountDto,
+            Guid,
+            PagedAndSortedResultRequestDto,
+            CreateAccountDto,
+            UpdateAccountDto>,
+        IAccountsAppService
     {
         private readonly IRepository<Account> _accountRepository;
 

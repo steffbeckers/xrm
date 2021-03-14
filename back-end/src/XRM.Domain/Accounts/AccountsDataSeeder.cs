@@ -11,10 +11,15 @@ namespace XRM.Accounts
 {
     public class AccountsDataSeeder : IDataSeedContributor, ITransientDependency
     {
+        private readonly AccountManager _accountManager;
         private readonly IRepository<Account> _accountRepository;
 
-        public AccountsDataSeeder(IRepository<Account> accountRepository)
+        public AccountsDataSeeder(
+            AccountManager accountManager,
+            IRepository<Account> accountRepository
+        )
         {
+            _accountManager = accountManager;
             _accountRepository = accountRepository;
         }
 
@@ -22,20 +27,24 @@ namespace XRM.Accounts
         {
             if (await _accountRepository.CountAsync() == 0)
             {
+                Account steffBeckersAccount = await _accountManager.CreateAsync(
+                    "Steff Beckers",
+                    "steff@steffbeckers.eu",
+                    "+32 499 765 192",
+                    "https://steffbeckers.eu"
+                );
+
+                Account aariXaAccount = await _accountManager.CreateAsync(
+                    "aariXa",
+                    "info@aarixa.be",
+                    null,
+                    "https://www.aarixa.be"
+                );
+
                 await _accountRepository.InsertManyAsync(
                     new List<Account>() {
-                        new Account()
-                        {
-                            Name = "Steff Beckers",
-                            Email = "steff@steffbeckers.eu",
-                            Website = "https://steffbeckers.eu"
-                        },
-                        new Account()
-                        {
-                            Name = "aariXa",
-                            Email = "info@aarixa.be",
-                            Website = "https://www.aarixa.be"
-                        }
+                        steffBeckersAccount,
+                        aariXaAccount
                     },
                     autoSave: true
                 );

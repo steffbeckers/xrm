@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JetBrains.Annotations;
+using System;
+using Volo.Abp;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace XRM.Accounts
@@ -12,7 +10,7 @@ namespace XRM.Accounts
         /// <summary>
         /// The account name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         /// <summary>
         /// The account's e-mail address.
@@ -28,5 +26,35 @@ namespace XRM.Accounts
         /// The account's website URL.
         /// </summary>
         public string Website { get; set; }
+
+        private Account()
+        {
+            // This constructor is for deserialization / ORM purpose
+        }
+
+        public Account(
+            Guid id,
+            [NotNull] string name,
+            [CanBeNull] string email = null,
+            [CanBeNull] string telephone = null,
+            [CanBeNull] string website = null) : base(id)
+        {
+            SetName(name);
+        }
+
+        private void SetName([NotNull] string name)
+        {
+            Name = Check.NotNullOrWhiteSpace(
+                name,
+                nameof(name),
+                maxLength: AccountConsts.NameMaxLength
+            );
+        }
+
+        public Account ChangeName([NotNull] string name)
+        {
+            SetName(name);
+            return this;
+        }
     }
 }

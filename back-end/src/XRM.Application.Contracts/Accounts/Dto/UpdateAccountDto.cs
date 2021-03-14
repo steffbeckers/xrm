@@ -7,17 +7,17 @@ namespace XRM.Accounts.Dto
     public class UpdateAccountDto : EntityDto<Guid>
     {
         [Required]
-        [StringLength(100)]
+        [StringLength(AccountConsts.NameMaxLength)]
         public string Name { get; set; }
 
-        [StringLength(100)]
         [EmailAddress]
+        [StringLength(AccountConsts.EmailMaxLength)]
         public string Email { get; set; }
 
-        [StringLength(100)]
+        [StringLength(AccountConsts.TelephoneMaxLength)]
         public string Telephone { get; set; }
 
-        [StringLength(512)]
+        [StringLength(AccountConsts.WebsiteMaxLength)]
         public string Website { get; set; }
     }
 }
