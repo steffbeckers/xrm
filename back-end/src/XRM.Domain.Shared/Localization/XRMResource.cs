@@ -5,6 +5,5 @@ namespace XRM.Localization
     [LocalizationResourceName("XRM")]
     public class XRMResource
     {
-
     }
 }
