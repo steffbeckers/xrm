@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\XRM.Domain.Shared\XRM.Domain.Shared.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\Recruitment\src\Recruitment.Application.Contracts\Recruitment.Application.Contracts.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.ObjectExtending" Version="4.2.2" />

@@ -1,4 +1,4 @@
-﻿using Localization.Resources.AbpUi;
+using Localization.Resources.AbpUi;
 using XRM.Localization;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
@@ -7,6 +7,7 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.TenantManagement;
+using Recruitment;
 
 namespace XRM
 {
@@ -18,6 +19,7 @@ namespace XRM
         typeof(AbpTenantManagementHttpApiModule),
         typeof(AbpFeatureManagementHttpApiModule)
         )]
+    [DependsOn(typeof(RecruitmentHttpApiModule))]
     public class XRMHttpApiModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

@@ -1,10 +1,11 @@
-﻿using Volo.Abp.Account;
+using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
+using Recruitment;
 
 namespace XRM
 {
@@ -17,6 +18,7 @@ namespace XRM
         typeof(AbpTenantManagementApplicationModule),
         typeof(AbpFeatureManagementApplicationModule)
         )]
+    [DependsOn(typeof(RecruitmentApplicationModule))]
     public class XRMApplicationModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
