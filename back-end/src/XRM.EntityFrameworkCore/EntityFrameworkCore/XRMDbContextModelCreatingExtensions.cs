@@ -26,14 +26,17 @@ namespace XRM.EntityFrameworkCore
                 b.ConfigureByConvention(); // auto configure for the base class props
 
                 b.Property(p => p.Name)
-                    .HasMaxLength(100);
+                    .HasMaxLength(AccountConsts.NameMaxLength);
                 b.HasIndex(p => p.Name);
 
                 b.Property(p => p.Email)
-                    .HasMaxLength(100);
+                    .HasMaxLength(AccountConsts.EmailMaxLength);
+                
+                b.Property(p => p.Telephone)
+                    .HasMaxLength(AccountConsts.TelephoneMaxLength);
 
                 b.Property(p => p.Website)
-                    .HasMaxLength(512);
+                    .HasMaxLength(AccountConsts.WebsiteMaxLength);
             });
         }
     }
