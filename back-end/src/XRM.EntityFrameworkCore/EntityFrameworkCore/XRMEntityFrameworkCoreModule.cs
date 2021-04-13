@@ -11,6 +11,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Recruitment.EntityFrameworkCore;
+using SteffBeckers.Abp.Sales.EntityFrameworkCore;
 
 namespace XRM.EntityFrameworkCore
 {
@@ -27,6 +28,7 @@ namespace XRM.EntityFrameworkCore
         typeof(AbpFeatureManagementEntityFrameworkCoreModule)
         )]
     [DependsOn(typeof(RecruitmentEntityFrameworkCoreModule))]
+    [DependsOn(typeof(SalesEntityFrameworkCoreModule))]
     public class XRMEntityFrameworkCoreModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

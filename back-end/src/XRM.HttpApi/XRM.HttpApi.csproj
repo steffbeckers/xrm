@@ -12,6 +12,7 @@
   <ProjectReference Include="..\..\modules\Recruitment\src\Recruitment.HttpApi\Recruitment.HttpApi.csproj" /></ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SteffBeckers.Abp.Sales.HttpApi" Version="0.1.0" />
     <PackageReference Include="Volo.Abp.Account.HttpApi" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="4.2.2" />

@@ -13,6 +13,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 using Recruitment;
+using SteffBeckers.Abp.Sales;
 
 namespace XRM
 {
@@ -27,6 +28,7 @@ namespace XRM
         typeof(AbpTenantManagementDomainSharedModule)
         )]
     [DependsOn(typeof(RecruitmentDomainSharedModule))]
+    [DependsOn(typeof(SalesDomainSharedModule))]
     public class XRMDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

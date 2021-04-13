@@ -6,6 +6,7 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using Recruitment;
+using SteffBeckers.Abp.Sales;
 
 namespace XRM
 {
@@ -19,6 +20,7 @@ namespace XRM
         typeof(AbpObjectExtendingModule)
     )]
     [DependsOn(typeof(RecruitmentApplicationContractsModule))]
+    [DependsOn(typeof(SalesApplicationContractsModule))]
     public class XRMApplicationContractsModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

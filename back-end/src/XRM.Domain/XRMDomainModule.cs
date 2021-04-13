@@ -14,6 +14,7 @@ using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Recruitment;
+using SteffBeckers.Abp.Sales;
 
 namespace XRM
 {
@@ -31,6 +32,7 @@ namespace XRM
         typeof(AbpEmailingModule)
     )]
     [DependsOn(typeof(RecruitmentDomainModule))]
+    [DependsOn(typeof(SalesDomainModule))]
     public class XRMDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
