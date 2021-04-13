@@ -13,7 +13,6 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using Recruitment;
 using SteffBeckers.Abp.Sales;
 
 namespace XRM
@@ -31,7 +30,6 @@ namespace XRM
         typeof(AbpTenantManagementDomainModule),
         typeof(AbpEmailingModule)
     )]
-    [DependsOn(typeof(RecruitmentDomainModule))]
     [DependsOn(typeof(SalesDomainModule))]
     public class XRMDomainModule : AbpModule
     {

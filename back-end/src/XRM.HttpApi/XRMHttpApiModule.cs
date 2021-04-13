@@ -7,7 +7,6 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.TenantManagement;
-using Recruitment;
 using SteffBeckers.Abp.Sales;
 
 namespace XRM
@@ -20,7 +19,6 @@ namespace XRM
         typeof(AbpTenantManagementHttpApiModule),
         typeof(AbpFeatureManagementHttpApiModule)
         )]
-    [DependsOn(typeof(RecruitmentHttpApiModule))]
     [DependsOn(typeof(SalesHttpApiModule))]
     public class XRMHttpApiModule : AbpModule
     {

@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XRM.Domain.Shared\XRM.Domain.Shared.csproj" />
-  <ProjectReference Include="..\..\modules\Recruitment\src\Recruitment.Application.Contracts\Recruitment.Application.Contracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\XRM.Domain.Shared\XRM.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SteffBeckers.Abp.Sales.Application.Contracts" Version="0.1.0" />

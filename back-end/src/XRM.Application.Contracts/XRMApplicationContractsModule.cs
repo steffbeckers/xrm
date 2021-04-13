@@ -5,7 +5,6 @@ using Volo.Abp.Modularity;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
-using Recruitment;
 using SteffBeckers.Abp.Sales;
 
 namespace XRM
@@ -19,7 +18,6 @@ namespace XRM
         typeof(AbpTenantManagementApplicationContractsModule),
         typeof(AbpObjectExtendingModule)
     )]
-    [DependsOn(typeof(RecruitmentApplicationContractsModule))]
     [DependsOn(typeof(SalesApplicationContractsModule))]
     public class XRMApplicationContractsModule : AbpModule
     {

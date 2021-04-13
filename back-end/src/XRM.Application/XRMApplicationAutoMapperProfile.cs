@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using XRM.Accounts;
-using XRM.Accounts.Dto;
 
 namespace XRM
 {
@@ -11,10 +9,6 @@ namespace XRM
             /* You can configure your AutoMapper mapping configuration here.
              * Alternatively, you can split your mapping configurations
              * into multiple profile classes for a better organization. */
-
-            CreateMap<Account, AccountDto>();
-            CreateMap<CreateAccountDto, Account>();
-            CreateMap<UpdateAccountDto, Account>();
         }
     }
 }

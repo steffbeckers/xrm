@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XRM.Application.Contracts\XRM.Application.Contracts.csproj" />
-  <ProjectReference Include="..\..\modules\Recruitment\src\Recruitment.HttpApi.Client\Recruitment.HttpApi.Client.csproj" /></ItemGroup>
+    <ProjectReference Include="..\XRM.Application.Contracts\XRM.Application.Contracts.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SteffBeckers.Abp.Sales.HttpApi.Client" Version="0.1.0" />

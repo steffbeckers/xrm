@@ -3,15 +3,6 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
-    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
-    "Name": "Name",
-    "E-mail": "E-mail",
-    "Telephone": "Telephone",
-    "Website": "Website",
-    "Permission:Accounts": "Accounts",
-    "Permission:Accounts:Create": "Create",
-    "Permission:Accounts:Edit": "Edit",
-    "Permission:Accounts:Delete": "Delete",
-    "XRM:00001": "There is already an account with the same name: {name}"
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io."
   }
 }

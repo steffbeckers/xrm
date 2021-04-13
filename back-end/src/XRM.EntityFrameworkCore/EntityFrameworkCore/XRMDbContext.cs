@@ -5,7 +5,6 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
-using XRM.Accounts;
 
 namespace XRM.EntityFrameworkCore
 {
@@ -22,7 +21,6 @@ namespace XRM.EntityFrameworkCore
     public class XRMDbContext : AbpDbContext<XRMDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
-        public DbSet<Account> Accounts { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside XRMDbContextModelCreatingExtensions.ConfigureXRM

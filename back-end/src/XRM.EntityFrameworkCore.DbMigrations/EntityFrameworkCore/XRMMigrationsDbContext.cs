@@ -9,7 +9,7 @@ using Volo.Abp.IdentityServer.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using Recruitment.EntityFrameworkCore;
+using SteffBeckers.Abp.Sales.EntityFrameworkCore;
 
 namespace XRM.EntityFrameworkCore
 {
@@ -44,7 +44,7 @@ namespace XRM.EntityFrameworkCore
             /* Configure your own tables/entities inside the ConfigureXRM method */
 
             builder.ConfigureXRM();
-            builder.ConfigureRecruitment();
+            builder.ConfigureSales();
         }
     }
 }

@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="4.2.2" />
-    <ProjectReference Include="..\..\src\Recruitment.HttpApi.Client\Recruitment.HttpApi.Client.csproj" />
   </ItemGroup>
 
   <ItemGroup>

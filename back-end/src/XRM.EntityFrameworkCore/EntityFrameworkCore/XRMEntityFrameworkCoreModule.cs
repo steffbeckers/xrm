@@ -10,7 +10,6 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using Recruitment.EntityFrameworkCore;
 using SteffBeckers.Abp.Sales.EntityFrameworkCore;
 
 namespace XRM.EntityFrameworkCore
@@ -27,7 +26,6 @@ namespace XRM.EntityFrameworkCore
         typeof(AbpTenantManagementEntityFrameworkCoreModule),
         typeof(AbpFeatureManagementEntityFrameworkCoreModule)
         )]
-    [DependsOn(typeof(RecruitmentEntityFrameworkCoreModule))]
     [DependsOn(typeof(SalesEntityFrameworkCoreModule))]
     public class XRMEntityFrameworkCoreModule : AbpModule
     {
