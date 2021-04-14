@@ -6,6 +6,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using SteffBeckers.Abp.Sales;
+using ProductManagement;
 
 namespace XRM
 {
@@ -19,6 +20,7 @@ namespace XRM
         typeof(AbpFeatureManagementApplicationModule)
         )]
     [DependsOn(typeof(SalesApplicationModule))]
+    [DependsOn(typeof(ProductManagementApplicationModule))]
     public class XRMApplicationModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

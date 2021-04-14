@@ -8,6 +8,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.TenantManagement;
 using SteffBeckers.Abp.Sales;
+using ProductManagement;
 
 namespace XRM
 {
@@ -20,6 +21,7 @@ namespace XRM
         typeof(AbpFeatureManagementHttpApiModule)
         )]
     [DependsOn(typeof(SalesHttpApiModule))]
+    [DependsOn(typeof(ProductManagementHttpApiModule))]
     public class XRMHttpApiModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
