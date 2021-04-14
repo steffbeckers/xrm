@@ -15,6 +15,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using SteffBeckers.Abp.Sales;
 using ProductManagement;
+using Volo.Blogging;
 
 namespace XRM
 {
@@ -33,6 +34,7 @@ namespace XRM
     )]
     [DependsOn(typeof(SalesDomainModule))]
     [DependsOn(typeof(ProductManagementDomainModule))]
+    [DependsOn(typeof(BloggingDomainModule))]
     public class XRMDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

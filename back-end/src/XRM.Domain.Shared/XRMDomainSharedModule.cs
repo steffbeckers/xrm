@@ -14,6 +14,7 @@ using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 using SteffBeckers.Abp.Sales;
 using ProductManagement;
+using Volo.Blogging;
 
 namespace XRM
 {
@@ -29,6 +30,7 @@ namespace XRM
         )]
     [DependsOn(typeof(SalesDomainSharedModule))]
     [DependsOn(typeof(ProductManagementDomainSharedModule))]
+    [DependsOn(typeof(BloggingDomainSharedModule))]
     public class XRMDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

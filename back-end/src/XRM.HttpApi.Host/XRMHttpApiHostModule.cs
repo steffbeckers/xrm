@@ -27,6 +27,8 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
+using SteffBeckers.Abp.Sales;
+using ProductManagement;
 
 namespace XRM
 {
@@ -110,6 +112,8 @@ namespace XRM
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(XRMApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(SalesApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(ProductManagementApplicationModule).Assembly);
             });
         }
 

@@ -7,6 +7,8 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using SteffBeckers.Abp.Sales;
 using ProductManagement;
+using Volo.Blogging;
+using Volo.Blogging.Admin;
 
 namespace XRM
 {
@@ -20,6 +22,8 @@ namespace XRM
     )]
     [DependsOn(typeof(SalesHttpApiClientModule))]
     [DependsOn(typeof(ProductManagementHttpApiClientModule))]
+    [DependsOn(typeof(BloggingHttpApiClientModule))]
+    [DependsOn(typeof(BloggingAdminHttpApiClientModule))]
     public class XRMHttpApiClientModule : AbpModule
     {
         public const string RemoteServiceName = "Default";

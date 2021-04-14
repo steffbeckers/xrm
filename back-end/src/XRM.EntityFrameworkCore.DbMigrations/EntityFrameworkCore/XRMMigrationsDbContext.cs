@@ -11,6 +11,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using SteffBeckers.Abp.Sales.EntityFrameworkCore;
 using ProductManagement.EntityFrameworkCore;
+using Volo.Blogging.EntityFrameworkCore;
 
 namespace XRM.EntityFrameworkCore
 {
@@ -47,6 +48,7 @@ namespace XRM.EntityFrameworkCore
             builder.ConfigureXRM();
             builder.ConfigureSales();
             builder.ConfigureProductManagement();
+            builder.ConfigureBlogging();
         }
     }
 }
