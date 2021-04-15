@@ -1,7 +1,7 @@
 import { ListResultDto, PagedAndSortedResultRequestDto } from '@abp/ng.core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AccountsService } from '@proxy/accounts';
-import { AccountDto } from '@proxy/accounts/dto';
+import { AccountsService } from '@proxy/steff-beckers/abp/sales/accounts';
+import { AccountDto } from '@proxy/steff-beckers/abp/sales/accounts/dto';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

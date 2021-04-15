@@ -113,7 +113,7 @@ namespace XRM
             {
                 options.ConventionalControllers.Create(typeof(XRMApplicationModule).Assembly);
                 options.ConventionalControllers.Create(typeof(SalesApplicationModule).Assembly);
-                options.ConventionalControllers.Create(typeof(ProductManagementApplicationModule).Assembly);
+                //options.ConventionalControllers.Create(typeof(ProductManagementApplicationModule).Assembly);
             });
         }
 

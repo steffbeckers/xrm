@@ -1,2 +1,3 @@
-import * as Accounts from './accounts';
-export { Accounts };
+import * as ProductManagement from './product-management';
+import * as SteffBeckers from './steff-beckers';
+export { ProductManagement, SteffBeckers };
