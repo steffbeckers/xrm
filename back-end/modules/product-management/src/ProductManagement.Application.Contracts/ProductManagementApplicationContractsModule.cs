@@ -11,6 +11,5 @@ namespace ProductManagement
         )]
     public class ProductManagementApplicationContractsModule : AbpModule
     {
-
     }
 }

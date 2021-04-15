@@ -1,4 +1,6 @@
-﻿using Volo.Abp.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ProductManagement.Products;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace ProductManagement.EntityFrameworkCore
@@ -9,5 +11,6 @@ namespace ProductManagement.EntityFrameworkCore
         /* Add DbSet for each Aggregate Root here. Example:
          * DbSet<Question> Questions { get; }
          */
+        DbSet<Product> Products { get; }
     }
 }

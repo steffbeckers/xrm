@@ -21,6 +21,7 @@ function configureRoutes(routesService: RoutesService) {
         iconClass: 'fas fa-account',
         order: 2,
         layout: eLayoutType.application,
+        requiredPolicy: 'Sales.Accounts',
       },
     ]);
   };

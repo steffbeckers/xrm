@@ -1,7 +1,15 @@
 {
   "culture": "en",
   "texts": {
-    "ManageYourProfile":  "Manage your profile",
-    "SamplePageMessage": "A sample page for the ProductManagement module"
+    "ManageYourProfile": "Manage your profile",
+    "SamplePageMessage": "A sample page for the ProductManagement module",
+    "Name": "Name",
+    "Description": "Description",
+    "StockCount": "Stock count",
+    "Permission:ProductManagement": "Sales",
+    "Permission:Products": "Products",
+    "Permission:Products:Create": "Create",
+    "Permission:Products:Edit": "Edit",
+    "Permission:Products:Delete": "Delete"
   }
 }

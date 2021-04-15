@@ -29,6 +29,7 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
 using SteffBeckers.Abp.Sales;
 using ProductManagement;
+using Volo.Abp.EventBus.RabbitMq;
 
 namespace XRM
 {
@@ -42,7 +43,8 @@ namespace XRM
         typeof(AbpAspNetCoreAuthenticationJwtBearerModule),
         typeof(AbpAccountWebIdentityServerModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule)
+        typeof(AbpSwashbuckleModule),
+        typeof(AbpEventBusRabbitMqModule)
     )]
     public class XRMHttpApiHostModule : AbpModule
     {
@@ -113,7 +115,7 @@ namespace XRM
             {
                 options.ConventionalControllers.Create(typeof(XRMApplicationModule).Assembly);
                 options.ConventionalControllers.Create(typeof(SalesApplicationModule).Assembly);
-                //options.ConventionalControllers.Create(typeof(ProductManagementApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(ProductManagementApplicationModule).Assembly);
             });
         }
 

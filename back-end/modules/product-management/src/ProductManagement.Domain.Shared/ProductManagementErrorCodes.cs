@@ -2,6 +2,6 @@
 {
     public static class ProductManagementErrorCodes
     {
-        //Add your business exception error codes here...
+        // Add your business exception error codes here...
     }
 }

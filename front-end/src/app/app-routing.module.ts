@@ -27,7 +27,7 @@ const routes: Routes = [
     loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule),
     canActivate: [PermissionGuard],
     data: {
-      requiredPolicy: 'XRM.Accounts',
+      requiredPolicy: 'Sales.Accounts',
     },
   },
 ];

@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using ProductManagement.Products;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace ProductManagement.EntityFrameworkCore
 {
@@ -38,6 +40,24 @@ namespace ProductManagement.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+
+            builder.Entity<Product>(b =>
+            {
+                // Configure table & schema name
+                b.ToTable(options.TablePrefix + "Products", options.Schema);
+
+                b.ConfigureByConvention();
+
+                // Properties
+                b.Property(x => x.Name)
+                    .IsRequired()
+                    .HasMaxLength(ProductConsts.NameMaxLength);
+                b.Property(x => x.Description)
+                    .HasMaxLength(ProductConsts.DescriptionMaxLength);
+
+                // Indexes
+                b.HasIndex(q => q.CreationTime);
+            });
         }
     }
 }
