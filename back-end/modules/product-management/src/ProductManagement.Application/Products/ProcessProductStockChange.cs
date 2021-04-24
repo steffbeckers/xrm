@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
 using ProductManagement.Products.Eto;
 using System.Threading.Tasks;
+using Volo.Abp.DependencyInjection;
 using Volo.Abp.EventBus.Distributed;
 
 namespace ProductManagement.Products
 {
     // Test event handler
-    public class ProcessProductStockChange : IDistributedEventHandler<ProductStockCountChangedEto>
+    public class ProcessProductStockChange : IDistributedEventHandler<ProductStockCountChangedEto>, ITransientDependency
     {
         private readonly ILogger<ProcessProductStockChange> _logger;
 
